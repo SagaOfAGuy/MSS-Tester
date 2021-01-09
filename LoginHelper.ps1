@@ -20,6 +20,7 @@ $ChromeOptions.AcceptInsecureCertificates = $True
 
 # Navigate to VCU zoom site but don't login
 $ChromeDriver = New-Object OpenQA.Selenium.Chrome.ChromeDriver($ChromeOptions)
+# Define this URL to run script 
 $ChromeDriver.Url = ''
 $username = $ChromeDriver.FindElementById("username"); 
 $password = $ChromeDriver.FindElementById("password"); 
