@@ -5,11 +5,13 @@ $kaltura_file_location="";
 $vcu_zoom_link=""; 
 $vlc_file_location="";  
 $ticket_system_link=""; 
+
 # Function for ejecting CD drive. Code can be found here: https://superuser.com/questions/1335225/how-to-eject-and-insert-cd-dvd-drive-using-command-line-in-windows?noredirect=1&lq=1
 function Eject-CD()
 {
    (New-Object -com "WMPlayer.OCX.7").cdromcollection.item(0).eject()
 }
+
 # Get Drive letter of CD drive 
 function GetDrive() {
 	$volumes = get-volume; 
@@ -21,6 +23,7 @@ function GetDrive() {
         	}
     }
 }
+
 # Function to Play the DVD during roomcheck
 function Play-CD()
 {
@@ -61,6 +64,7 @@ function LaunchKaltura()
         [System.Windows.MessageBox]::Show("Kaltura is not installed. Submit ticket if needed");   
     }  
 }
+
 # Main function 
 function main() 
 {
@@ -70,9 +74,3 @@ function main()
 }
 # Call main function
 main 
-
-
-
-
-
-
